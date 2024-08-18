@@ -14,6 +14,10 @@ section{
     background-color: grey;
     flex-direction: column;
     padding: 50px 0;
+    background-image: url('Studienprojekt/csm_X-ALPS5_frosted_orange_4_efdc5fdee2.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 section h1 img {
     width: 300px;
