@@ -4,7 +4,7 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 
 const recognition = new window.SpeechRecognition();
 recognition.interimResults = true;          // Zwischenergebnisse anzeigen in Realtime
-recognition.lang = 'de-DE'; // Sprache auf Deutsch setzen
+recognition.lang = 'de-DE';                 // Sprache auf Deutsch setzen
 
 let p = document.createElement('p');
 
@@ -18,10 +18,10 @@ recognition.addEventListener('result', (e)=> {
     texts.appendChild(p);
 
     if (e.results[0].isFinal) {
-        if (text.includes('Unfall')) {
+        if (text.includes('Unfall')) {            // welches Wort wird erkannt
             p = document.createElement('p');
             p.classList.add('details');
-            p.innerText = 'Bitte füllen Sie folgendes Formular aus:';
+            p.innerText = 'Bitte füllen Sie folgendes Formular aus:';  //Antwort auf das Wort 
             texts.appendChild(p);
         }
         p = document.createElement('p');
@@ -29,7 +29,7 @@ recognition.addEventListener('result', (e)=> {
     console.log(text);
 })
 
-recognition.addEventListener('end', () => {
+recognition.addEventListener('end', () => {            // dauerhafte eingabe
     recognition.start();
 })
 
